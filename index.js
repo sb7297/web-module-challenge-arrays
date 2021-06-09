@@ -192,8 +192,21 @@ Use the getRandomFlavors function and new arrays below to do the following:
 */
 
 
-function getRandomFlavors(/*code here*/){
-    /*code here*/
+function getRandomFlavors(flavors1, flavors2, flavors3, flavors4){
+    let menus = [flavors1, flavors2, flavors3, flavors4];
+    function menuIndex() {
+        return Math.floor(Math.random() * 4);
+    }
+    function flavorIndex(flavor_count) {
+        return Math.floor(Math.random() * flavor_count);
+    }
+    let ret = [];
+    for (let i = 0; i < 31; i++) {
+        let menu = menuIndex();
+        let flavor = flavorIndex(menus[menu].length);
+        ret.push(menus[menu][flavor]);
+    }
+    return ret;
 }
 
 // NEW DATA ARRAYS FOR STRETCH 2 ⬇️
@@ -278,6 +291,7 @@ const regionalFlavors = [
 ]
 
 
+console.log(getRandomFlavors(originalFlavors, newFlavors, seasonalFlavors, regionalFlavors));
 
 /* 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 */
 function foo(){
