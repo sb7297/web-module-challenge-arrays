@@ -150,10 +150,15 @@ Use the filterByWord function below to do the following:
     DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-    /*your code here*/
+function filterByWord(input_array, substr){
+    let ret = [];
+    for (let i = 0; i < input_array.length; i++) {
+        if (input_array[i].includes(substr)) {
+            ret.push(input_array[i]);
+        }
+    }
+    return ret;
 }
-
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
