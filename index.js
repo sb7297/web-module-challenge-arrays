@@ -46,7 +46,7 @@ Use the copy function below to do the following:
 */
 
 function copy(input_array){
-    return input_array.map(x => x);
+    return input_array.slice();
 }    
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -76,7 +76,8 @@ Use the addFlavor function below to do the following:
 */
 
 function addFlavor(flavor_arr, new_flavor_str){
-     return [new_flavor_str].concat(flavor_arr);
+    flavor_arr.unshift(new_flavor_str);
+    return flavor_arr;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -91,7 +92,8 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(input_array){
-    return input_array.slice(0, input_array.length-1);
+    input_array.pop();
+    return input_array;
 }
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
